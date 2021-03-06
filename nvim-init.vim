@@ -23,11 +23,11 @@
 "  Functions
 
 " Automatic installation of vim-plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+"if empty(glob('~/.vim/autoload/plug.vim'))
+"  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+"    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+"endif
 
 """""""""""""""""""""""""""""""""""""""
 " General
@@ -63,12 +63,12 @@ set so=7
 
 let $LANG='en'
 set langmenu=en
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
+" source $VIMRUNTIME/delmenu.vim
+" source $VIMRUNTIME/menu.vim
 
 " Turn on the Wild menu
 set wildmenu
-
+   
 " Ignore compiled files
 set wildignore=*.o,*~,*.pycA
 if has("win16") || has("win32")
@@ -145,16 +145,13 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 
-try
     " Enable Dracula Pro Theme
     " packadd! dracula_pro
-    packadd! dracula
-    colorscheme dracula
+    " packadd! dracula
+    " colorscheme meta5
 
     " let g:dracula_colorterm = 0
     " colorscheme dracula_pro
-catch
-endtry
 
 set background=dark
 
